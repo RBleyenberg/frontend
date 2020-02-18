@@ -1,0 +1,14 @@
+<ng-container *ngIf="componentViewer.componentDocItem | async; let docItem">
+  <span class="cdk-visually-hidden" tabindex="-1" #initialFocusTarget>
+    API for {{docItem?.id}}
+  </span>
+  
+    <doc-viewer [documentUrl]="getApiDocumentUrl(docItem!)"
+      class="dare-component-view-text-content dare-component-documentation"
+      (contentRendered)="updateTableOfContents(docItem!.name, $event)">
+    </doc-viewer>
+
+  <table-of-contents #toc
+      *ngIf="showToc | async"
+      container=".mat-drawer-content"></table-of-contents>
+</ng-container>

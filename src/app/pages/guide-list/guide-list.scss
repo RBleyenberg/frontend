@@ -1,0 +1,20 @@
+@import '../../../styles/constants';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.dare-guide-list {
+  flex-grow: 1;
+  margin: $content-padding-side;
+
+  @media (max-width: $extra-small-breakpoint-width) {
+    margin: 0;
+  }
+}
+
+.dare-guide-item, .dare-guide-item:hover {
+  text-decoration: none;
+}

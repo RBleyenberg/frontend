@@ -1,0 +1,53 @@
+.dare-navbar-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 0;
+
+  > .mat-button {
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.dare-angular-logo {
+  height: 42px;
+  margin: 0 4px 0 0;
+  vertical-align: middle;
+}
+
+.dare-navbar-link {
+  text-decoration: inherit;
+  flex: 1;
+}
+
+.dare-navbar {
+  display: none;
+}
+
+.dare-navbar-show-small {
+  display: none;
+}
+
+/**
+  * Rules for when the device is detected to be a small screen.
+  * Moves content two rows instead of one.
+  */
+@media (max-width: 720px) {
+  .dare-navbar-hide-small {
+    display: none;
+  }
+
+  .dare-navbar-show-small {
+    display: block;
+  }
+
+  .dare-navbar {
+    display: flex;
+  }
+}

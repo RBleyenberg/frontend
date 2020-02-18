@@ -1,0 +1,48 @@
+.dare-documentation-class-name {
+  margin-top: 28px;
+  margin-bottom: 0;
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  background: none;
+
+  code {
+    background: none;
+  }
+}
+
+.dare-documentation-type-alias-name,
+.dare-documentation-class-name {
+  @media (max-width: 399px) {
+    word-break: break-word;
+  }
+}
+
+.dare-documentation-h3 {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 40px 0 20px;
+  padding-bottom: 3px;
+}
+
+.dare-documentation-method-name-cell,
+.dare-documentation-method-header,
+.dare-documentation-method-description-cell,
+.dare-documentation-property-description,
+.dare-documentation-class-export-label,
+.dare-documentation-directive-selectors,
+.dare-documentation-class-description,
+.dare-documentation-class-export-name {
+  font-size: 15px;
+}
+
+.dare-documentation-class-description {
+  line-height: 24px;
+}
+
+.dare-documentation-property-type {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 5px;
+}

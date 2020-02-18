@@ -1,0 +1,53 @@
+@import './constants';
+
+.dare-documentation table,
+.dare-markdown-table {
+  border-collapse: collapse;
+  border-radius: 2px;
+  border-spacing: 0;
+  margin: 0 0 32px 0;
+  width: 100%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
+}
+
+.dare-documentation th,
+.dare-markdown-th {
+  font-weight: 400;
+  max-width: 100px;
+  padding: 13px 16px;
+  text-align: left;
+}
+
+.dare-documentation td,
+.dare-markdown-td {
+  font-weight: 400;
+  padding: 8px 16px;
+
+  @media (max-width: $extra-small-breakpoint-width) {
+    &.dare-documentation-properties-name-cell,
+    &.dare-documentation-method-parameter-cell,
+    &.dare-documentation-method-returns-type-cell,
+    &.dare-documentation-method-description-cell {
+      min-width: 80px;
+      word-break: break-word;
+    }
+  }
+}
+
+
+@media (max-width: $small-breakpoint-width) {
+  .dare-documentation table,
+  .dare-markdown-table {
+    margin: 0 0 32px 0;
+  }
+
+  .dare-documentation th,
+  .dare-markdown-th {
+    padding: 6px 16px;
+  }
+
+  .dare-documentation td,
+  .dare-markdown-td {
+    padding: 4px 8px;
+  }
+}

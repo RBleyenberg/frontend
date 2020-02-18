@@ -1,0 +1,62 @@
+.dare-theme-picker-menu {
+  .mat-menu-item {
+    .mat-icon.theme-example-icon {
+      margin-right: 0;
+      margin-left: 8px;
+      float: right;
+
+      svg {
+        vertical-align: middle;
+      }
+
+      // The below colors need to align with the themes defined in ThemePicker
+      &.deeppurple-amber svg {
+        .dare-theme-icon-background {
+          fill: #fafafa;
+        }
+        .dare-theme-icon-button {
+          fill: #FFC107;
+        }
+        .dare-theme-icon-toolbar {
+          fill: #673AB7;
+        }
+      }
+
+      &.indigo-pink svg {
+        .dare-theme-icon-background {
+          fill: #fafafa;
+        }
+        .dare-theme-icon-button {
+          fill: #E91E63;
+        }
+        .dare-theme-icon-toolbar {
+          fill: #3F51B5;
+        }
+      }
+
+      &.pink-bluegrey svg {
+        .dare-theme-icon-background {
+          fill: #303030;
+        }
+        .dare-theme-icon-button {
+          fill: #607D8B;
+        }
+        .dare-theme-icon-toolbar {
+          fill: #E91E63;
+        }
+      }
+
+      &.purple-green svg {
+        .dare-theme-icon-background {
+          fill: #303030;
+        }
+        .dare-theme-icon-button {
+          fill: #4CAF50;
+        }
+        .dare-theme-icon-toolbar {
+          fill: #9C27B0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<div class="dare-component-viewer">
+  <nav mat-tab-nav-bar class="dare-component-viewer-tabbed-content"
+       aria-label="Documentation Sections">
+    <a mat-tab-link class="dare-component-viewer-section-tab"
+        *ngFor="let section of sections"
+        [routerLink]="section.toLowerCase()"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">{{section}}</a>
+  </nav>
+
+  <div class="dare-component-viewer-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
