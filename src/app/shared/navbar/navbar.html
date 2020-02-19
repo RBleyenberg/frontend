@@ -10,6 +10,8 @@
      *ngFor="let key of sectionKeys"
      [routerLink]="key">{{sections[key].name}}</a>
   <div class="flex-spacer"></div>
+  <a mat-button class="dare-navbar-hide-small docs-button" routerLink="register">register</a>
+  <a mat-button class="dare-navbar-hide-small docs-button" routerLink="login">Login</a>
   <a mat-button class="dare-navbar-hide-small docs-button" routerLink="guides">Guides</a>
   <theme-picker></theme-picker>
 </nav>

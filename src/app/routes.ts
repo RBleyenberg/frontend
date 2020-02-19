@@ -3,6 +3,14 @@ import {CanActivateComponentSidenav} from './pages/component-sidenav/component-s
 
 export const MATERIAL_DOCS_ROUTES: Routes = [
   {
+    path: 'login',
+    loadChildren: () => import('./auth/login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterModule)
+  },
+  {
     path: '', pathMatch: 'full',
     loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
   },

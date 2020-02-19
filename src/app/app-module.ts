@@ -6,6 +6,7 @@ import {RouterModule} from '@angular/router';
 import {MaterialDocsApp} from './dare-erp-app';
 import {MATERIAL_DOCS_ROUTES} from './routes';
 import {NavBarModule} from './shared/navbar';
+import { GraphQLModule } from 'src/graphql.module';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import {NavBarModule} from './shared/navbar';
       relativeLinkResolution: 'corrected'
     }),
     NavBarModule,
+    GraphQLModule
   ],
   declarations: [MaterialDocsApp],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy}],

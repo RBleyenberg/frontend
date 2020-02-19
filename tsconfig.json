@@ -19,15 +19,15 @@
       "dom"
     ],
     "noImplicitAny": true,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,
     "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,
-    "strictNullChecks": true,
+    "strictNullChecks": false,
     "strictBindCallApply": true,
     "strictFunctionTypes": true
   },
   "exclude": [
-    "frontend/assets",
+    "src/assets",
     "dist"
   ],
   "angularCompilerOptions": {
