@@ -1,23 +1,5 @@
 import {Injectable} from '@angular/core';
 
-export interface DocItem {
-  id: string;
-  name: string;
-  summary?: string;
-  packageName?: string;
-  DocId?: string;
-}
-
-export interface DocCategory {
-  id: string;
-  name: string;
-  items: DocItem[];
-}
-
-export interface DocSection {
-  name: string;
-}
-
 const ITEMS = 'items';
 const CRM = 'crm';  // wordt ook de url opbouw
 export const SECTIONS: {[key: string]: DocSection} = {
@@ -118,4 +100,22 @@ export class DocumentationItems {
   getCategoryById(id: string): DocCategory | undefined {
     return ALL_CATEGORIES.find(c => c.id === id);
   }
+}
+
+export interface DocItem {
+  id: string;
+  name: string;
+  summary?: string;
+  packageName?: string;
+  DocId?: string;
+}
+
+export interface DocCategory {
+  id: string;
+  name: string;
+  items: DocItem[];
+}
+
+export interface DocSection {
+  name: string;
 }
