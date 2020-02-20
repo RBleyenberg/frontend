@@ -51,3 +51,24 @@
     display: flex;
   }
 }
+
+.user-button {
+  margin-right: 10px;
+}
+
+.avatar {
+  height: 28px;
+  position: absolute;
+  margin-top: -16px;
+  border-radius: 50%;
+}
+
+.s-16 {
+  position: absolute;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+theme-picker {
+  margin-top: -6px;
+}

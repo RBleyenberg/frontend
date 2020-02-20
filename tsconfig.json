@@ -4,6 +4,8 @@
     "baseUrl": "./",
     "outDir": "../dist/out-tsc",
     "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "suppressImplicitAnyIndexErrors": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
@@ -18,7 +20,7 @@
       "es2018",
       "dom"
     ],
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": true,
     "noFallthroughCasesInSwitch": true,

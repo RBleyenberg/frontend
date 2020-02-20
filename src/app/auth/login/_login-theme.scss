@@ -1,0 +1,32 @@
+@mixin component-login-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  #login {
+
+    #login-intro {
+        color: white;
+    }
+
+    #login-form-wrapper {
+            background: map-get($primary, card);
+        }
+
+        #login-form {
+
+            .separator {
+                color: map-get($foreground, secondary-text);
+
+                .text {
+                    &:before,
+                    &:after {
+                        border-top-color: map-get($foreground, divider);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="card-body">
+      <form (ngSubmit)="submit()" [formGroup]="userForm" novalidate>
+        <div class="form-group">
+          <label class="d-block">
+            <label class="text-black-50">ID</label>
+            <input type="text" class="form-control" formControlName="id"/>
+            <span hidden>ID</span>
+          </label>
+
+          <label class="d-block">
+            <label class="text-black-50">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" autocomplete="firstName"
+                   [placeholder]="'First Name'"/>
+            <span hidden>First Name</span>
+          </label>
+
+          <label class="d-block">
+            <label class="text-black-50">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" autocomplete="lastName"
+                   [placeholder]="'Last Name'"/>
+            <span hidden>Last Name</span>
+          </label>
+
+          <label class="d-block">
+            <label class="text-black-50">Email</label>
+            <input type="email" class="form-control" formControlName="email" autocomplete="email"
+                   [placeholder]="'Email'"/>
+            <span hidden>Email</span>
+          </label>
+
+          <label class="d-block">
+            <label class="text-black-50">Username</label>
+            <input type="text" class="form-control" formControlName="username" autocomplete="username"
+                   [placeholder]="'Username'"/>
+            <span hidden>Username</span>
+          </label>
+
+          <label class="d-block">
+            <label class="text-black-50">Role</label>
+            <select id="roleName" formControlName="roleName" class="custom-select">
+              <option *ngFor="let item of roles" [value]="item.name">{{item.name}}</option>
+            </select>
+            <span hidden>Role</span>
+          </label>
+        </div>
+      </form>
+      <div class="mt-5">
+        <button class="btn btn-primary" type="submit" (click)="submit()" [disabled]="userForm.invalid || isLoading">
+          <i class="fas fa-cog fa-spin" [hidden]="!isLoading"></i>
+          <span>Update</span>
+        </button>
+
+        <button class="btn btn-warning" (click)="previousState()">
+          <span>Previous Page</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

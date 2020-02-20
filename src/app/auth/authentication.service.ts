@@ -204,10 +204,10 @@ export class AuthenticationService {
         this.router.navigate(['/access-denied']);
         swal
             .fire({
-                title: 'Your session has expired. You will be automatically signed out.',
-                timer: 3500,
-                allowEscapeKey: false,
-                allowOutsideClick: false,
+                title: 'Your session has expired. Please sign in again.',
+                timer: 1500,
+                allowEscapeKey: true,
+                allowOutsideClick: true,
                 onOpen: () => {
                     swal.showLoading();
                 }

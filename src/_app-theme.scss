@@ -3,6 +3,8 @@
 @import './app/pages/component-list/component-list-theme';
 @import './app/pages/component-sidenav/component-sidenav-theme';
 @import './app/pages/component-viewer/component-viewer-theme';
+@import './app/auth/register/register-theme';
+@import './app/auth/login/login-theme';
 @import './app/pages/guide-list/guide-list-theme';
 @import './app/pages/homepage/homepage-theme';
 @import './app/shared/footer/footer-theme';
@@ -47,6 +49,8 @@
   @include component-list-theme($theme);
   @include component-viewer-sidenav-theme($theme);
   @include component-viewer-theme($theme);
+  @include component-register-theme($theme);
+  @include component-login-theme($theme);
   @include docs-site-documentation-theme($theme);
   @include docs-site-markdown-theme($theme);
   @include docs-site-svg-theme($theme);

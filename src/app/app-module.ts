@@ -1,3 +1,4 @@
+import { FlexLayoutModule } from '@angular/flex-layout';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
@@ -12,6 +13,7 @@ import { GraphQLModule } from 'src/graphql.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
     RouterModule.forRoot(MATERIAL_DOCS_ROUTES, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',

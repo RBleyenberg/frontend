@@ -11,6 +11,10 @@ export const MATERIAL_DOCS_ROUTES: Routes = [
     loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterModule)
   },
   {
+    path: 'user-management',
+    loadChildren: () => import('./users/user-management.module').then(m => m.UserManagementModule)
+  },
+  {
     path: '', pathMatch: 'full',
     loadChildren: () => import('./pages/homepage').then(m => m.HomepageModule)
   },
