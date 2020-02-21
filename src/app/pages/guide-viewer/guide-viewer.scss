@@ -16,10 +16,10 @@ $guide-content-margin-side-xs: 15px;
   display: block;
   text-align: center;
 
-  @media ($mat-xsmall) {
-    padding-left: $content-padding-side-xs;
-    padding-right: $content-padding-side-xs;
-  }
+  // @media ($mat-xsmall) {
+  //   padding-left: $content-padding-side-xs;
+  //   padding-right: $content-padding-side-xs;
+  // }
 }
 
 .dare-guide-toc-and-content {

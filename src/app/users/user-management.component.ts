@@ -1,21 +1,23 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IUser } from '../auth/user.model';
 import { UserService } from './user.service';
 import { EventManager } from './event-manager.service';
 
-declare const $: any;
-
 @Component({
   selector: 'app-user-management',
   templateUrl: './user-management.component.html',
-  styleUrls: ['./user-management.component.scss']
+  styleUrls: ['./user-management.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class UserManagementComponent implements OnInit, OnDestroy {
   
   users: IUser[];
   eventSub: Subscription;
   userSub: Subscription;
+
+  displayedColumns: string[] = ['firstName', 'lastName', 'username', 'email', 'role', 'actions'];
+
 
   constructor(private user$: UserService, private eventManager: EventManager) {}
 
@@ -32,15 +34,6 @@ export class UserManagementComponent implements OnInit, OnDestroy {
   reset() {
     this.userSub = this.user$.query().subscribe(res => {
       this.users = res;
-      this.initDataTable();
-    });
-  }
-
-  private initDataTable() {
-    $(document).ready(() => {
-      $('#user-management').DataTable({
-        order: [[6, 'asc']]
-      });
     });
   }
 

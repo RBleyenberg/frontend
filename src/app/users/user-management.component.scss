@@ -1,0 +1,76 @@
+
+.dare-primary-header {
+  margin-bottom: 2em;
+}
+.docs-component-viewer-content {
+  position: relative;
+  z-index: -200;
+}
+
+app-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.dare-users-toc-and-content {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 !important;
+
+  // @media (max-width: $extra-small-breakpoint-width) {
+  //   flex-direction: column;
+  // }
+}
+
+.example-container {
+  height: calc(100vh - 250px);
+  overflow: auto;
+}
+
+.mat-table {
+  width: 100%;
+  // background: transparent;
+  box-shadow: none;
+
+  .mat-column-checkbox {
+    flex: 0 1 64px;
+    padding-left: 18px;
+  }
+
+  .mat-column-avatar {
+    flex: 0 1 64px;
+  }
+
+  .mat-column-buttons {
+    flex: 0 1 80px;
+  }
+
+  .mat-row {
+    position: relative;
+    cursor: pointer;
+    padding: 8px;
+
+    .mat-cell {
+      min-width: 0;
+
+      &.mat-column-detail-button {
+        flex: 0 1 auto;
+        padding: 0 24px 0 0;
+
+        // @include media-breakpoint('gt-md') {
+        //     display: none;
+        // }
+      }
+    }
+  }
+}
+
+.new-button {
+  position: absolute;
+  bottom: 75px;
+  right: 25px;
+}
